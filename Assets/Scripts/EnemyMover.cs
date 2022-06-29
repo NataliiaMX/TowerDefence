@@ -5,16 +5,20 @@ using UnityEngine;
 public class EnemyMover : MonoBehaviour
 {
     [SerializeField] List<WayPoint> path = new List<WayPoint>();
+    [SerializeField] float waitTime = 1f;
     void Start()
     {
-        PrintWaypointName();
+        StartCoroutine(FollowPath());
+        
     }
 
-    private void PrintWaypointName ()
+    private IEnumerator FollowPath ()
     {
         foreach (WayPoint waypoint in path)
         {
-            Debug.Log(waypoint.name);
+            transform.position = waypoint.transform.position;
+            yield return new WaitForSeconds(waitTime);
+            //this method allows to use coroutine and iterate throuth path with delay without invoke
         }
     }
 }
