@@ -317,23 +317,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4815714184809942356, guid: 5cfba6951aba647469f6884c58e10c0b, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.9995905
+      value: 0.98286194
       objectReference: {fileID: 0}
     - target: {fileID: 4815714184809942356, guid: 5cfba6951aba647469f6884c58e10c0b, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.028617281
+      value: 0.18434316
       objectReference: {fileID: 0}
     - target: {fileID: 4815714184809942356, guid: 5cfba6951aba647469f6884c58e10c0b, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.00000006014436
+      value: 0.00000008993766
       objectReference: {fileID: 0}
     - target: {fileID: 4815714184809942356, guid: 5cfba6951aba647469f6884c58e10c0b, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.00000008662845
+      value: -0.0000001267594
       objectReference: {fileID: 0}
     - target: {fileID: 4815714184809942356, guid: 5cfba6951aba647469f6884c58e10c0b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 3.28
+      value: 21.246
       objectReference: {fileID: 0}
     - target: {fileID: 4815714184809942356, guid: 5cfba6951aba647469f6884c58e10c0b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
@@ -343,16 +343,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5272893146631706319, guid: 5cfba6951aba647469f6884c58e10c0b, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: -2432090755550338912, guid: ff228455065cc4a7c9103679863a814e, type: 3}
     - target: {fileID: 7192227549187032600, guid: 5cfba6951aba647469f6884c58e10c0b, type: 3}
       propertyPath: m_Name
       value: Particle System
       objectReference: {fileID: 0}
     - target: {fileID: 7969317272639291113, guid: 5cfba6951aba647469f6884c58e10c0b, type: 3}
-      propertyPath: CollisionModule.type
+      propertyPath: ShapeModule.enabled
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7969317272639291113, guid: 5cfba6951aba647469f6884c58e10c0b, type: 3}
-      propertyPath: CollisionModule.m_EnergyLossOnCollision.scalar
+      propertyPath: ShapeModule.alignToDirection
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []

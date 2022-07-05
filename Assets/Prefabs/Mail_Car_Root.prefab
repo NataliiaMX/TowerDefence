@@ -335,6 +335,7 @@ GameObject:
   - component: {fileID: 4441227246932932}
   - component: {fileID: 1062928920}
   - component: {fileID: 1839833353220346003}
+  - component: {fileID: 1674377340}
   m_Layer: 0
   m_Name: Mail_Car_Root
   m_TagString: Untagged
@@ -393,6 +394,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b92f2ab21b05eca4497031568f5bf64e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHP: 5
+  currentHP: 5
+--- !u!65 &1674377340
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1940508852615070}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 34.29, y: 17.54, z: 27.49}
+  m_Center: {x: 0, y: 7.7, z: -2.79}
 --- !u!1 &1946974994956382
 GameObject:
   m_ObjectHideFlags: 0
@@ -404,7 +420,6 @@ GameObject:
   - component: {fileID: 4216723192647962}
   - component: {fileID: 33891018262115326}
   - component: {fileID: 23389107080474446}
-  - component: {fileID: 3175214620062656143}
   m_Layer: 0
   m_Name: Mail_Car_Body
   m_TagString: Untagged
@@ -479,16 +494,3 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &3175214620062656143
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1946974994956382}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 19.994774, y: 16.93, z: 27.000006}
-  m_Center: {x: 0, y: 7.0000005, z: 9.264425e-23}
