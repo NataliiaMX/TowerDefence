@@ -6,7 +6,7 @@ public class EnemyMover : MonoBehaviour
 {
     [SerializeField] List<WayPoint> path = new List<WayPoint>();
     [SerializeField] [Range(0f, 5f)] float speed = 1f;
-    void Start()
+    void OnEnable ()
     {
         FindPath();
         ReturnToStart();
@@ -50,6 +50,6 @@ public class EnemyMover : MonoBehaviour
 
             //this method allows to use coroutine and iterate throuth path with delay without Invoke
         }
-        Destroy(gameObject);
+        gameObject.SetActive(false);
     }
 }
