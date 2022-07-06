@@ -8,8 +8,26 @@ public class EnemyMover : MonoBehaviour
     [SerializeField] [Range(0f, 5f)] float speed = 1f;
     void Start()
     {
+        FindPath();
+        ReturnToStart();
         StartCoroutine(FollowPath());
-        
+    }
+
+    private void ReturnToStart()
+    {
+        transform.position = path[0].transform.position;
+    }
+
+    private void FindPath () 
+    {
+        path.Clear();
+
+        GameObject parent = GameObject.FindGameObjectWithTag("Path");
+
+        foreach (Transform child in parent.transform)
+        {
+            path.Add(child.GetComponent<WayPoint>());
+        }
     }
 
     private IEnumerator FollowPath ()
@@ -32,5 +50,6 @@ public class EnemyMover : MonoBehaviour
 
             //this method allows to use coroutine and iterate throuth path with delay without Invoke
         }
+        Destroy(gameObject);
     }
 }
