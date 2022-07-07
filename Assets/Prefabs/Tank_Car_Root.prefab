@@ -291,7 +291,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wearpon: {fileID: 4980455794606424}
-  target: {fileID: 4441227246932932, guid: 0c9629ec143c94b42bea23885ade9e6f, type: 3}
+  towerRange: 1
+  projectileParticle: {fileID: 7969317272639291113, guid: 5cfba6951aba647469f6884c58e10c0b, type: 3}
 --- !u!1001 &1278266293320762989
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -353,6 +354,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7969317272639291113, guid: 5cfba6951aba647469f6884c58e10c0b, type: 3}
       propertyPath: ShapeModule.enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7969317272639291113, guid: 5cfba6951aba647469f6884c58e10c0b, type: 3}
+      propertyPath: EmissionModule.enabled
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7969317272639291113, guid: 5cfba6951aba647469f6884c58e10c0b, type: 3}
