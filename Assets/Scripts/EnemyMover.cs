@@ -6,11 +6,17 @@ public class EnemyMover : MonoBehaviour
 {
     [SerializeField] List<WayPoint> path = new List<WayPoint>();
     [SerializeField] [Range(0f, 5f)] float speed = 1f;
+    Enemy enemy;
     void OnEnable ()
     {
         FindPath();
         ReturnToStart();
         StartCoroutine(FollowPath());
+    }
+
+    private void Start() 
+    {
+        enemy = GetComponent<Enemy>();    
     }
 
     private void ReturnToStart()
@@ -50,6 +56,7 @@ public class EnemyMover : MonoBehaviour
 
             //this method allows to use coroutine and iterate throuth path with delay without Invoke
         }
+        enemy.TakeGold();
         gameObject.SetActive(false);
     }
 }

@@ -6,14 +6,14 @@ using System;
 
 [ExecuteAlways]
 public class CoordinateLabeler : MonoBehaviour
-{
-    TextMeshPro label;
-    Vector2Int coordinates = new Vector2Int();
-    WayPoint waypoint;
+    {
     [SerializeField] Color defaultColor = Color.black;
     [SerializeField] Color blockedColor = Color.gray;
 
-
+    TextMeshPro label;
+    Vector2Int coordinates = new Vector2Int();
+    WayPoint waypoint;
+    
     private void Awake() 
     {
         DisplayCoordinates();
