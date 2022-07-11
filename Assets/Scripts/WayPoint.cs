@@ -5,15 +5,15 @@ using UnityEngine;
 public class WayPoint : MonoBehaviour
 {
    
-    [SerializeField] GameObject tower;
+    [SerializeField] Tower tower;
     [SerializeField] bool isPlaceable = true;
     public bool IsPlaceable { get { return isPlaceable; }} //property of variable isPlacceable
     private void OnMouseDown() //on click
     {
         if (isPlaceable)
         {
-            Instantiate(tower, transform.position, Quaternion.identity);
-            isPlaceable = false;
+            bool isPlaced = tower.CreateTower(tower, transform.position);
+            isPlaceable = !isPlaced;
         }
         
     }

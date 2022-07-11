@@ -256,6 +256,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4980455794606424}
   - component: {fileID: 3191957705965846964}
+  - component: {fileID: 7794600010861400250}
   m_Layer: 0
   m_Name: Tank_Car_Root
   m_TagString: Untagged
@@ -293,6 +294,18 @@ MonoBehaviour:
   wearpon: {fileID: 4980455794606424}
   towerRange: 1
   projectileParticle: {fileID: 7969317272639291113, guid: 5cfba6951aba647469f6884c58e10c0b, type: 3}
+--- !u!114 &7794600010861400250
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1947128498660186}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa435be9ed68b7d44a3a66d5694e4369, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1278266293320762989
 PrefabInstance:
   m_ObjectHideFlags: 0
