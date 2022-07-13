@@ -9,7 +9,7 @@ public class EnemyHealth : MonoBehaviour
     [SerializeField] int maxHP = 5;
     [SerializeField] int currentHP = 0;
     [Tooltip("Adds amount to maxHP every time enemy dies")]
-    [SerializeField] int difficultyRamp = 1;
+    [SerializeField] int difficultyRamp = 2;
     Enemy enemy;
 
     void OnEnable()
@@ -33,8 +33,9 @@ public class EnemyHealth : MonoBehaviour
 
         if(currentHP <= 0)
         {
-            gameObject.SetActive(false);
             maxHP += difficultyRamp;
+            //Debug.Log(maxHP);
+            gameObject.SetActive(false);
             enemy.RewardGold();
         }
     }

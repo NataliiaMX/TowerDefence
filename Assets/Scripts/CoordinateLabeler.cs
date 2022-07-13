@@ -5,6 +5,7 @@ using TMPro;
 using System;
 
 [ExecuteAlways]
+[RequireComponent(typeof(TextMeshPro))]
 public class CoordinateLabeler : MonoBehaviour
     {
     [SerializeField] Color defaultColor = Color.black;
@@ -28,7 +29,7 @@ public class CoordinateLabeler : MonoBehaviour
             DisplayCoordinates();
             UpdateObjectName();
         }
-        ColorCoordinates();
+        SetLabelColor();
         ToggleLabels();
     }
 
@@ -40,7 +41,7 @@ public class CoordinateLabeler : MonoBehaviour
         }
     }
 
-    private void ColorCoordinates()
+    private void SetLabelColor()
     {
        
         if (waypoint.IsPlaceable)
@@ -56,9 +57,11 @@ public class CoordinateLabeler : MonoBehaviour
     private void DisplayCoordinates()
     {
         coordinates.x = Mathf.RoundToInt(transform.parent.position.x / 
-        UnityEditor.EditorSnapSettings.move.x); //bc changed snap movement settings 
+        UnityEditor.EditorSnapSettings.move.x); //bc changed snap movement settings
+        Debug.Log(coordinates.x);
         coordinates.y = Mathf.RoundToInt(transform.parent.position.z / 
         UnityEditor.EditorSnapSettings.move.z); //z because I'm working in a,z axis like with x,y axes 
+        Debug.Log(coordinates.y);
         label = GetComponent<TextMeshPro>();
 
         label.text = coordinates.x + "," + coordinates.y;
