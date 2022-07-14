@@ -8,7 +8,6 @@ public class Enemy : MonoBehaviour
     [SerializeField] int goldPenalty = 25;
 
     Bank bank;
-    // Start is called before the first frame update
     void Start()
     {
         bank = FindObjectOfType<Bank>();

@@ -32,7 +32,7 @@ public class Bank : MonoBehaviour
 
         if(currentBalance < 0)
         {
-            //Lose the game;
+            Debug.Log("Lost");
             ReloadScene();
         }
     }

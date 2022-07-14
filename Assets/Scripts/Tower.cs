@@ -5,6 +5,7 @@ using UnityEngine;
 public class Tower : MonoBehaviour
 {
     [SerializeField] int cost = 45;
+    [SerializeField] int costGrow = 10; //adds amount after every tower built
     public bool CreateTower (Tower tower, Vector3 position)
     {
         Bank bank = FindObjectOfType<Bank>();
@@ -18,6 +19,7 @@ public class Tower : MonoBehaviour
         {
             Instantiate(tower.gameObject, position, Quaternion.identity);
             bank.Withdraw(cost);
+            cost += costGrow;
             return true;
         }
         return false;
