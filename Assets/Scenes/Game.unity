@@ -2268,6 +2268,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gridSize: {x: 7, y: 7}
+  unityGridSize: 10
 --- !u!4 &724079609
 Transform:
   m_ObjectHideFlags: 0
@@ -5785,8 +5786,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: caf1d489f7c71d54b81f0d5d2ce13e4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startCoordinates: {x: 0, y: 0}
-  destinationCoordinates: {x: 3, y: 2}
+  startCoordinates: {x: 0, y: 1}
+  destinationCoordinates: {x: 1, y: 4}
 --- !u!1001 &1667769901
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7167,6 +7168,10 @@ PrefabInstance:
     - target: {fileID: 8576183047610071540, guid: f19be3172533dbd4198d2025109a5dc3, type: 3}
       propertyPath: m_Name
       value: ObjectPool
+      objectReference: {fileID: 0}
+    - target: {fileID: 8576183047610071541, guid: f19be3172533dbd4198d2025109a5dc3, type: 3}
+      propertyPath: poolSize
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8576183047610071542, guid: f19be3172533dbd4198d2025109a5dc3, type: 3}
       propertyPath: m_RootOrder
