@@ -6,7 +6,9 @@ using UnityEngine;
 public class PathFinder : MonoBehaviour
 {
     [SerializeField] Vector2Int startCoordinates;
+    public Vector2Int StartCoordinates { get { return startCoordinates; } }
     [SerializeField] Vector2Int destinationCoordinates;
+    public Vector2Int DestinationCoordinates { get { return destinationCoordinates; } }
 
     Node startNode;
     Node destinationNode;
@@ -31,8 +33,8 @@ public class PathFinder : MonoBehaviour
 
     private void Start() 
     {
-        startNode = gridManager.Grid[startCoordinates];
-        destinationNode = gridManager.Grid[destinationCoordinates];
+        startNode = grid[startCoordinates];
+        destinationNode = grid[destinationCoordinates];
         GetNewPath();
     }
 
@@ -70,6 +72,8 @@ public class PathFinder : MonoBehaviour
 
     private void BreadthFirstSearch()
     {
+        startNode.isWalkable = true;
+        destinationNode.isWalkable = true;
         frontier.Clear();
         reached.Clear();
 
@@ -127,7 +131,7 @@ public class PathFinder : MonoBehaviour
                 return true;
             }
         }
-        
+
         return false;
     }
 }
