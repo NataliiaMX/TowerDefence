@@ -12,7 +12,7 @@ public class EnemyMover : MonoBehaviour
     Enemy enemy;
     void OnEnable ()
     {
-        FindPath();
+        RecalculatePath();
         ReturnToStart();
         StartCoroutine(FollowPath());
     }
@@ -29,7 +29,7 @@ public class EnemyMover : MonoBehaviour
         transform.position = gridManager.GetPositionFromCoordinates(pathFinder.StartCoordinates);
     }
 
-    private void FindPath () 
+    private void RecalculatePath () 
     {
         path.Clear();
 
