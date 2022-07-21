@@ -51,6 +51,16 @@ public class GridManager : MonoBehaviour
        return null;
     }
 
+    public void ResetNodes()
+    {
+        foreach (KeyValuePair<Vector2Int, Node> enrty in grid)
+        {
+            enrty.Value.connectedTo = null;
+            enrty.Value.isExplored = false;
+            enrty.Value.isPath = false;
+        }
+    }
+
     private void CreateGrid()
     {
         for (int x = 0; x < gridSize.x; x++)
