@@ -371,18 +371,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 329781461b0e7844eac8bf2a373385a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  path:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  speed: 1
+  speed: 1.4
 --- !u!65 &1674377340
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -422,8 +411,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b92f2ab21b05eca4497031568f5bf64e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHP: 5
-  currentHP: 0
+  maxHitPoints: 5
   difficultyRamp: 2
 --- !u!1 &1946974994956382
 GameObject:

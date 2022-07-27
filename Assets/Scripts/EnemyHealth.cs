@@ -1,23 +1,27 @@
-using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(Enemy))] 
+[RequireComponent(typeof(Enemy))]
 public class EnemyHealth : MonoBehaviour
 {
-    [SerializeField] int maxHP = 5;
-    [SerializeField] int currentHP = 0;
+    [SerializeField] int maxHitPoints = 5;
+
+    [Tooltip("Adds amount to maxHitPoints when enemy dies.")]
+    [SerializeField] int difficultyRamp = 1;
+
+    int currentHitPoints = 0;
     Enemy enemy;
+
 
     void OnEnable()
     {
-        currentHP = maxHP;     
+        currentHitPoints = maxHitPoints;        
     }
 
-    private void Start() 
+    void Start()
     {
-        enemy = GetComponent<Enemy>();    
+        enemy = GetComponent<Enemy>();
     }
 
     void OnParticleCollision(GameObject other) 
@@ -27,14 +31,13 @@ public class EnemyHealth : MonoBehaviour
 
     void ProcessHit() 
     {
-        currentHP--;
+        currentHitPoints--;
 
-        if(currentHP <= 0)
+        if(currentHitPoints <= 0)
         {
-            //Debug.Log(maxHP);
             gameObject.SetActive(false);
+            maxHitPoints += difficultyRamp;
             enemy.RewardGold();
         }
     }
-
 }

@@ -37,7 +37,9 @@ public class TargetLocator : MonoBehaviour
 
     private void AimWearpon()
     {
-        float targetDistance = Vector3.Distance(transform.position, target.transform.position);
+        if (target != null)
+        {
+            float targetDistance = Vector3.Distance(transform.position, target.transform.position);
         wearpon.LookAt(target);
 
         if(targetDistance < towerRange)
@@ -47,6 +49,7 @@ public class TargetLocator : MonoBehaviour
         else 
         {
             Attack(false);
+        }
         }
     }
 

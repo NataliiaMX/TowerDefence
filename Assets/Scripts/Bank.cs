@@ -13,7 +13,7 @@ public class Bank : MonoBehaviour
 
     [SerializeField] TextMeshProUGUI displayBalance;
 
-    void Awake()
+    public void Awake()
     {
         currentBalance = startingBalance;
         UpdateDisplay();
@@ -22,6 +22,11 @@ public class Bank : MonoBehaviour
     public void Deposit(int amount)
     {
         currentBalance += Mathf.Abs(amount);
+        if (currentBalance > 200)
+        {
+            Debug.Log("Win");
+            ReloadScene();
+        }
         UpdateDisplay();
     }
 

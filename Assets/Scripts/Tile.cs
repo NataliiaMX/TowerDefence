@@ -7,6 +7,7 @@ public class Tile : MonoBehaviour
     GridManager gridManager;
     Vector2Int coordinates = new Vector2Int();
     PathFinder pathFinder;
+    // int currentCost;
     [SerializeField] Tower tower;
     [SerializeField] bool isPlaceable = true;
     public bool IsPlaceable { get { return isPlaceable; }} //property of variable isPlacceable
@@ -15,10 +16,12 @@ public class Tile : MonoBehaviour
     {
         gridManager = FindObjectOfType<GridManager>();    
         pathFinder = FindObjectOfType<PathFinder>();
+        // currentCost = tower.GetComponent<Tower>().currentCost;
     }
 
     private void Start() 
     {
+        // currentCost = 70;
         if (gridManager != null)
         {
             coordinates = gridManager.GetCoordinatesFromPosition(transform.position);
