@@ -13,6 +13,11 @@ public class EnemyMover : MonoBehaviour
     GridManager gridManager;
     PathFinder pathfinder;
 
+    private void Start() 
+    {
+            
+    }
+
     void OnEnable()
     {
         ReturnToStart();

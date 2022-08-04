@@ -13,12 +13,14 @@ public class SceneLoader : MonoBehaviour
     }
     public void StartGame ()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene("Game");
     }
 
     public void ReloadGame ()
     {
-        SceneManager.LoadScene(0);
+        Scene currentScene = SceneManager.GetActiveScene();
+        SceneManager.LoadScene(currentScene.buildIndex);
+
     }
 
     public void QuitGame ()

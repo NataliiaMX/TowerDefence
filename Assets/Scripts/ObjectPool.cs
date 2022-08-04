@@ -10,9 +10,10 @@ public class ObjectPool : MonoBehaviour
     [SerializeField] [Range(0.1f, 30f)] float spawnTimer = 1f;
     GameObject[] pool;
 
-    private void Awake() 
+    private void Start() 
     {
         PopulatePool();
+        StartCoroutine(SpawnEnemy());
     }
 
     private void PopulatePool()
@@ -26,10 +27,7 @@ public class ObjectPool : MonoBehaviour
         }
     }
 
-    private void Start() 
-    {
-        StartCoroutine(SpawnEnemy());
-    }
+    
 
     IEnumerator SpawnEnemy ()
     {

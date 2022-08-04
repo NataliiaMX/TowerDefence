@@ -306,9 +306,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa435be9ed68b7d44a3a66d5694e4369, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initialCost: 70
-  currentCost: 20
-  costGrow: 10
+  cost: 1
+  buildDelay: 1
 --- !u!1001 &7651051214851039992
 PrefabInstance:
   m_ObjectHideFlags: 0
