@@ -7,9 +7,10 @@ public class SceneLoader : MonoBehaviour
 {
     [SerializeField] Canvas gameOverCanvas;
 
-    public void Start ()
+    private void Start ()
     {
        gameOverCanvas.enabled = false; 
+       Time.timeScale = 1;
     }
     public void StartGame ()
     {
