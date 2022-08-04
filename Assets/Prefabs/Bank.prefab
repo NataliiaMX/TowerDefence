@@ -46,3 +46,5 @@ MonoBehaviour:
   startingBalance: 150
   currentBalance: 0
   displayBalance: {fileID: 0}
+  gameOverCanvas: {fileID: 0}
+  updatableText: {fileID: 0}

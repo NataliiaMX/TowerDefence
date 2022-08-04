@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
+using System;
 
 public class Bank : MonoBehaviour
 {
@@ -12,6 +13,8 @@ public class Bank : MonoBehaviour
     public int CurrentBalance { get { return currentBalance; } }
 
     [SerializeField] TextMeshProUGUI displayBalance;
+    [SerializeField] Canvas gameOverCanvas;
+    [SerializeField] TextMeshProUGUI updatableText;
 
     public void Awake()
     {
@@ -24,8 +27,7 @@ public class Bank : MonoBehaviour
         currentBalance += Mathf.Abs(amount);
         if (currentBalance > 200)
         {
-            Debug.Log("Win");
-            ReloadScene();
+            WinHandler();
         }
         UpdateDisplay();
     }
@@ -37,8 +39,7 @@ public class Bank : MonoBehaviour
 
         if(currentBalance < 0)
         {
-            Debug.Log("Lost");
-            ReloadScene();
+            GameOverHandler();
         }
     }
 
@@ -47,9 +48,17 @@ public class Bank : MonoBehaviour
         displayBalance.text = "Gold: " + currentBalance;
     }
 
-    void ReloadScene()
+    private void GameOverHandler ()
     {
-        Scene currentScene = SceneManager.GetActiveScene();
-        SceneManager.LoadScene(currentScene.buildIndex);
+        updatableText.text = "You lost!";
+        gameOverCanvas.enabled = true;
+        Time.timeScale = 0; // "stops" time
+    }
+
+    private void WinHandler()
+    {
+        updatableText.text = "You won";
+        gameOverCanvas.enabled = true;
+        Time.timeScale = 0;
     }
 }
