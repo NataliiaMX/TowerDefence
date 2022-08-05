@@ -159,8 +159,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 3, y: -115}
-  m_SizeDelta: {x: 514.3597, y: 130.8324}
+  m_AnchoredPosition: {x: 3, y: -121.71464}
+  m_SizeDelta: {x: 514.3597, y: 117.4031}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &403202480
 MonoBehaviour:
@@ -702,7 +702,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 378, y: -42}
+  m_AnchoredPosition: {x: 393, y: -49}
   m_SizeDelta: {x: 1848.222, y: 736.436}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1660841512
@@ -725,12 +725,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Welcome to Nata's Tower Defence!\n\nYou are usual Mexican farmer and you
-    have to defend your family from police raid. \nPlace towers so cops can't reach
-    your mansion. \nEach tank installation costs you some money. Each cop's car kill
-    gives you money. But with every kill cops become stronger.\nIf your balance becomes
-    negative, you will lose the game.\nIf you will collect 200 gold you will win.\nGood
-    luck!\n"
+  m_text: "Welcome to Farm'n'Fun!\n\nYou are usual Mexican farmer and you have to
+    defend your \nfamily from police raid. \nPlace tanks so cops can't reach your
+    mansion. \nEach tank installation costs you some money. \nEach cop's car kill
+    gives you money.\nBut with every kill cops become stronger...\nIf your gold balance
+    becomes negative you will lose the game.\nIf you will collect more than 200 gold
+    you will win.\nPress c to view ground labelling.\nGood luck!\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ed6ab7b2789b2734594e4c8a90d83cf3, type: 2}
   m_sharedMaterial: {fileID: -3702137913002247465, guid: ed6ab7b2789b2734594e4c8a90d83cf3, type: 2}

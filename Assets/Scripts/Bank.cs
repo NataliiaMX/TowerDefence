@@ -15,6 +15,7 @@ public class Bank : MonoBehaviour
     [SerializeField] TextMeshProUGUI displayBalance;
     [SerializeField] Canvas gameOverCanvas;
     [SerializeField] TextMeshProUGUI updatableText;
+    [SerializeField] TextMeshProUGUI goldBalanceChange;
 
     public void Awake()
     {
@@ -24,16 +25,19 @@ public class Bank : MonoBehaviour
 
     public void Deposit(int amount)
     {
+        goldBalanceChange.text = "+" + amount.ToString();
         currentBalance += Mathf.Abs(amount);
         if (currentBalance > 200)
         {
             WinHandler();
         }
         UpdateDisplay();
+        Invoke("ClearGoldChangeText", 3f);
     }
 
     public void Withdraw(int amount)
     {
+        goldBalanceChange.text = "-" + amount.ToString();
         currentBalance -= Mathf.Abs(amount);
         UpdateDisplay();
 
@@ -41,6 +45,7 @@ public class Bank : MonoBehaviour
         {
             GameOverHandler();
         }
+        Invoke("ClearGoldChangeText", 3f);
     }
 
     void UpdateDisplay()
@@ -60,5 +65,10 @@ public class Bank : MonoBehaviour
         updatableText.text = "You won";
         gameOverCanvas.enabled = true;
         Time.timeScale = 0;
+    }
+
+    private void ClearGoldChangeText ()
+    {
+        goldBalanceChange.text = " ";
     }
 }
